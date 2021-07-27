@@ -98,13 +98,33 @@ ul {
   display: flex;
   margin-left: auto;
 }
+.contacts-list::before {
+  display: inline-flex;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.contacts-list.icon-mail::before {
+  background-image: url(../images/icon-envelope.svg);
+  background-position: left;
+  width: 16px;
+  height: 16px;
+}
+
+.contacts-list.icon-tel::before {
+  background-image: url(../images/icon-smartphone.svg);
+  width: 10px;
+  height: 16px;
+}
 
 .contacts-links .item + .item {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .contacts-list {
-  display: block;
+  display: inline-flex;
   color: var(--primary-text);
   padding-top: 32px;
   padding-bottom: 32px;
