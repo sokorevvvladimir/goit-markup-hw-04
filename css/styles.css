@@ -185,6 +185,7 @@ ul {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -243,7 +244,6 @@ p {
 }
 .portfolio.list {
   display: flex;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
   /* background-color: teal; */
   margin-top: calc(-1 * var(--item-gap));
@@ -272,13 +272,6 @@ p {
   box-sizing: border-box;
 }
 
-/* .portfolio .item:nth-child(3n) {
-  margin-right: 0;
-} */
-/* .portfolio .item:nth-child(n + 7) {
-  margin-bottom: 0;
-} */
-
 /* Button types */
 .order-services {
   color: var(--primary-color);
@@ -288,9 +281,7 @@ p {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  display: inline-block;
   letter-spacing: 0.06em;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -327,8 +318,18 @@ p {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.hide {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Peculiarities */
@@ -397,15 +398,13 @@ p {
 .team-item:nth-child(4n) {
   margin-right: 0;
 }
-/* .team-item * {
-  outline: 2px solid tomato;
-} */
+
 .card-text {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-/* address */
+/* Footer */
 .address.link {
   color: var(--primary-color);
   font-weight: 400;
@@ -438,4 +437,50 @@ p {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.left-part {
+  margin-right: 70px;
+  max-width: 231px;
+}
+.middle-part {
+  width: 206px;
+}
+.join {
+  margin-bottom: 20px;
+
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.social.list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+.net {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+.instagram {
+  background-image: url(../images/instagram-icon-white.svg);
+}
+.twitter {
+  background-image: url(../images/twitter-icon-white.svg);
+}
+.facebook {
+  background-image: url(../images/facebook-icon-white.svg);
+}
+.linkedin {
+  background-image: url(../images/linkedin-icon-white.svg);
 }
