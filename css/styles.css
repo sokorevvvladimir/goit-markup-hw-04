@@ -98,33 +98,26 @@ ul {
   display: flex;
   margin-left: auto;
 }
-.contacts-list::before {
-  display: inline-flex;
-  content: "";
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 10px;
-}
-
-.contacts-list.icon-mail::before {
-  background-image: url(../images/icon-envelope.svg);
-  background-position: left;
-  width: 16px;
-  height: 16px;
-}
-
-.contacts-list.icon-tel::before {
-  background-image: url(../images/icon-smartphone.svg);
-  width: 10px;
-  height: 16px;
-}
 
 .contacts-links .item + .item {
   margin-left: 30px;
 }
+.icon-envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+.icon-smartphone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+}
 
 .contacts-list {
   display: inline-flex;
+  align-items: center;
   color: var(--primary-text);
   padding-top: 32px;
   padding-bottom: 32px;
@@ -135,6 +128,14 @@ ul {
 .site-nav:focus,
 .contacts-list:focus {
   color: var(--accent-color);
+}
+.icon-envelope:hover,
+.icon-envelope:focus {
+  fill: var(--accent-color);
+}
+.icon-smartphone:hover,
+.icon-smartphone:focus {
+  fill: var(--accent-color);
 }
 
 .current {
