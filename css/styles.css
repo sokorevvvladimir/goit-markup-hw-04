@@ -8,6 +8,8 @@
   --secondary-text: #212121;
 
   --item-gap: 30px;
+
+  --icon-fill-color: #afb1b8;
 }
 
 body {
@@ -349,12 +351,24 @@ p {
 }
 
 .peculiarities .item {
-  /* width: 270px; */
   flex-basis: calc(100% / 4 - 30px);
 }
 
 .peculiarities .item + .item {
   margin-left: 30px;
+}
+.peculiarities-icon {
+  width: 70px;
+  height: 70px;
+}
+.thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--our-team);
+  margin-bottom: 30px;
+  height: 120px;
+  border-radius: 4px;
 }
 
 /* Scope */
@@ -378,12 +392,13 @@ p {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+  margin-bottom: 10px;
 }
 .teammates-occupation {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
-  margin-top: 10px;
+  margin-bottom: 16px;
 }
 .team.list {
   display: flex;
@@ -403,6 +418,33 @@ p {
 .card-text {
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.social-item {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.social .slot + .slot {
+  margin-left: 10px;
+}
+.ref {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--icon-fill-color);
+}
+.ref:hover,
+.ref:focus {
+  background-color: var(--accent-color);
+}
+.ref:hover .social-item,
+.ref:focus .social-item {
+  fill: var(--primary-color);
 }
 
 /* Footer */
@@ -462,9 +504,9 @@ p {
 }
 .social.list {
   display: flex;
-  justify-content: space-between;
-  max-width: 100%;
+  max-width: 270px;
 }
+
 .net {
   background-color: rgba(255, 255, 255, 0.1);
   width: 44px;
