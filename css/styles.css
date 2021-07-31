@@ -237,11 +237,6 @@ p {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.portfolio-art:hover,
-.portfolio-art:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 .portfolio-item {
   color: var(--primary-text);
@@ -278,6 +273,14 @@ p {
   border: 1px solid #eeeeee;
   border-top: transparent;
   box-sizing: border-box;
+}
+.portfolio.link {
+  display: block;
+}
+.portfolio.link:hover,
+.portfolio.link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* Button types */
