@@ -237,6 +237,11 @@ p {
   line-height: 2;
   letter-spacing: 0.06em;
 }
+.portfolio-art:hover,
+.portfolio-art:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .portfolio-item {
   color: var(--primary-text);
@@ -292,6 +297,7 @@ p {
   padding: 10px 32px;
   min-width: 200px;
   margin: 0 auto;
+  border: none;
 }
 
 .filter {
@@ -306,6 +312,7 @@ p {
   cursor: pointer;
   border-radius: 4px;
   padding: 6px 22px;
+  border: none;
 }
 
 .order-services:hover,
@@ -357,10 +364,7 @@ p {
 .peculiarities .item + .item {
   margin-left: 30px;
 }
-.peculiarities-icon {
-  width: 70px;
-  height: 70px;
-}
+
 .thumb {
   display: flex;
   justify-content: center;
@@ -429,6 +433,7 @@ p {
 .social .slot + .slot {
   margin-left: 10px;
 }
+
 .ref {
   display: flex;
   justify-content: center;
@@ -445,6 +450,41 @@ p {
 .ref:hover .social-item,
 .ref:focus .social-item {
   fill: var(--primary-color);
+}
+
+/* Our customers */
+.customers.list {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: calc((100% - 150px) / 6);
+}
+.thumb-customers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--icon-fill-color);
+  background-color: var(--primary-color);
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-fill-color);
+  border-radius: 4px;
+}
+.customers .customer + .customer {
+  margin-left: 30px;
+}
+.customers-item {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
+.thumb-customers:hover,
+.thumb-customers:focus {
+  border-color: var(--accent-color);
+}
+
+.thumb-customers:hover .customers-item,
+.thumb-customers:focus .customers-item {
+  fill: var(--accent-color);
 }
 
 /* Footer */
@@ -504,26 +544,32 @@ p {
 }
 .social.list {
   display: flex;
-  max-width: 270px;
+  justify-content: space-between;
 }
 
 .net {
   background-color: rgba(255, 255, 255, 0.1);
-  width: 44px;
-  height: 44px;
-  background-repeat: no-repeat;
-  background-position: center;
   border-radius: 50%;
 }
-.instagram {
-  background-image: url(../images/instagram-icon-white.svg);
+.net-item {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
-.twitter {
-  background-image: url(../images/twitter-icon-white.svg);
+
+.ref-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 }
-.facebook {
-  background-image: url(../images/facebook-icon-white.svg);
+.ref-footer:hover,
+.ref-footer:focus {
+  background-color: var(--accent-color);
 }
-.linkedin {
-  background-image: url(../images/linkedin-icon-white.svg);
+
+.social .net + .net {
+  margin-left: 10px;
 }
